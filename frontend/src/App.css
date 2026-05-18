@@ -1,0 +1,235 @@
+:root {
+  --primary: #1c2331;
+  --accent: #f9d423;
+  --secondary: #ed213a;
+  --text: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1c2331 0%, #000000 100%);
+  color: var(--text);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.live-tag {
+  background: var(--secondary);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+section {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Scorecard Styles */
+.teams {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.dominant {
+  color: var(--accent);
+  text-shadow: 0 0 10px var(--accent);
+}
+
+.vs {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.main-score {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main-score h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.overs {
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+
+.win-prob {
+  margin-bottom: 20px;
+}
+
+.prob-bar {
+  height: 10px;
+  background: var(--secondary);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.team1-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 0.5s ease-in-out;
+}
+
+.prob-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.last-event {
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Interaction Panel */
+.prediction-box {
+  margin-bottom: 30px;
+}
+
+.prediction-box h3, .insights-box h3 {
+  margin-top: 0;
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+  color: var(--accent);
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  padding: 15px;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+button.selected {
+  background: var(--accent);
+  color: black;
+}
+
+.result-lock {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+
+.outcome-text {
+  font-size: 1.5rem;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.your-pick {
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Insights Feed */
+.insights-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.insight-item {
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.placeholder {
+  opacity: 0.5;
+  font-style: italic;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+.loading {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--accent);
+}
