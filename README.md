@@ -103,4 +103,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-**Built with ❤️ for IPL Fans everywhere.**
+**Built with Ashwin Mehta ❤️ for IPL Fans everywhere.**
