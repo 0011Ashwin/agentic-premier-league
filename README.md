@@ -12,7 +12,7 @@
 
 ### 📊 Real-Time Live Dashboard
 Experience the match with a high-fidelity IPL-themed interface.
-- **Live Scorecard**: Real-time updates for scores, wickets, and overs.
+- **Live Scorecard**: Real-time updates for scores, wickets, overs and wins.
 - **Dynamic Win Probability**: Visual representation of the match momentum shifting ball-by-ball.
 - **Cricbuzz Integration**: Powered by real stadium data via RapidAPI.
 
